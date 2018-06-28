@@ -68,7 +68,7 @@ class RideInput extends React.Component{
     this.setState({ _data: tmp})
   }
   render(){
-    console.log(this.state)
+    //console.log(this.state)
     return(
       <div>
 				<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -145,7 +145,7 @@ class RideInput extends React.Component{
     )
     console.log(this.state)
   }
-  
+
 }
 
 export default RideInput
