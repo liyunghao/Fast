@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import axios from 'axios'
 import withRouter from 'react-router-dom'
 
 class Home extends React.Component{
@@ -6,7 +7,7 @@ class Home extends React.Component{
 		super(props);
 
 		this.state = {
-			username : "",
+			username: "",
 			password: "",
 		}
 
@@ -24,20 +25,18 @@ class Home extends React.Component{
 	}
 
 	sendMes(){
+		console.log('hi')
 		let parm = {
 			username: this.state.username,
-	    password: this.state.password
+	    	password: this.state.password
 		}
 
-		fetch('/api/login', parm)
+		axios.post('/api/login', parm)
 		.then(response => {
-			if(!response.ok)
+			console.log(response)
+			if(response.data.status !== "success")
 				console.log("fetching error")
-			return response.json
-		}
-		)
-		.then(response => {
-			this.props.updateToken(response)
+			this.props.updateToken(response.data)
 		})
 	}
 
@@ -52,7 +51,7 @@ class Home extends React.Component{
 					<span>密碼</span>
 					<input type = "text" onChange={ (e) => this.updatePassword(e.target.value) }/>
 				</div>
-				<button onClick={ this.sendMes() }>登入</button>
+				<button onClick={ this.sendMes }>登入</button>
 			</div>
 		)
 	}
