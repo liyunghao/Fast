@@ -4,11 +4,12 @@ import ChatPeople from '../Components/ChatPeople'
 import ChatContent from '../Components/ChatContent'
 import SendBox from '../Components/SendBox'
 
+const image_url = "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/27867151_1734407369913963_7206349640850496058_n.jpg?_nc_cat=0&oh=81a19e4055890e9762ea1b09147aad78&oe=5BB4E410";
+
 const fake_people = [
 	{
     "username" : "郭弰面",
     "user_id" : 3,
-    "image_url" : ["https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/11694929_848518688559889_8720438967524717892_n.jpg?_nc_cat=0&oh=7f27622cff7f2ad3a7794747ce579438&oe=5BA83DBB"],   
     "liked_gift": "冰激淋",
     "current_party": ["吃冰囉", "走!"],
     "past_party": ["雞雞叫", "迷克夏"],
@@ -16,7 +17,6 @@ const fake_people = [
 	{
 		"username" : "姬旦荳釜",
     "user_id" : 4,
-    "image_url" : ["https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/27867151_1734407369913963_7206349640850496058_n.jpg?_nc_cat=0&oh=81a19e4055890e9762ea1b09147aad78&oe=5BB4E410"],
     "liked_gift": "卡娜赫拉 <3",
     "current_party": ["小七集點!!"],
     "past_party": ["卡納赫拉團購~"],
@@ -32,7 +32,6 @@ class Chatting extends React.Component{
 		chat : {
 		"username" : "",
     "user_id" : 0,
-    "image_url" : [""],
     "liked_gift": "",
     "current_party": [""],
     "past_party": [""],
@@ -55,18 +54,17 @@ class Chatting extends React.Component{
 			<div>
 				{
 						fake_people.length > 0?
-							fake_people.map( data => 
-								(<ChatNavBar key = {data.user_id} name = {data.username} image = {data.image_url} id = {data.user_id} onbtnClick = {this.ChangeChat}/>)
+							fake_people.map( data =>
+								(<ChatNavBar key = {data.user_id} name = {data.username} image = {image_url} id = {data.user_id} onbtnClick = {this.ChangeChat}/>)
 							)
 							:<div></div>
 				}
-				<ChatPeople item = {this.state.chat}/>
+				<ChatPeople item = {this.state.chat} img = {image_url}/>
 				<ChatContent />
 				<SendBox />
 			</div>
 		)
 	}
-
 }
 
 export default Chatting;
