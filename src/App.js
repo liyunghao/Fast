@@ -21,6 +21,7 @@ class App extends Component {
             <Route path = '/Ride' component = {NavBar}/>
             <Route path = '/Chatting' component = {NavBar}/>
             <Route path = '/Setting' component = {NavBar}/>
+            
             <Switch>
               <Route exact path = '/' component = { Home }/>
               <Route path = '/Ride' component = { Ride }/>
