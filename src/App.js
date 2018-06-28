@@ -18,14 +18,12 @@ class App extends Component {
       <div className = 'App'>
         <BrowserRouter>
           <div>
-            <Route path = '/Ride' component = {NavBar}/>
-            <Route path = '/Chatting' component = {NavBar}/>
-            <Route path = '/Setting' component = {NavBar}/>
+            <Route path = '/' component = {NavBar}/>
             <Switch>
               <Route exact path = '/' component = { Home }/>
               <Route path = '/Ride' component = { Ride }/>
-              {/* <Route path = '/Chatting' component = { Chatting }/> */}
-              {/* <Route path = '/Setting' component = { Setting }/>  */}
+              <Route path = '/Chatting' component = { Chatting }/>
+              <Route path = '/Setting' component = { Setting }/>
               <Route component = { Notfound }/>
             </Switch>
           </div>
