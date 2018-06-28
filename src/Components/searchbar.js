@@ -2,19 +2,27 @@ import React from 'react'
 
 
 class SearchBar extends React.component{
-render(){
-
 	constructor(props){
 		super(props)
-		this.state={
-			
+		this.state = {
+			data:[{
+				title: '',
+				location: '',
+				dest: '',
+				start_time: '',
+				end_time: '',
+				description:'',
+				vehicle:'',
+				max_pass:''
+			}]
 		}
 		this.updateDropdownTitle = this.updateDropdownTitle.bind(this)
 	}
 	updateDropdownTitle(t){
 		this.setState({ dropdownTitle: t })
 	}
-	return(
+	render(){
+		return(
 			<div className='container'>
 				<div className='row'>
 				<div className='col-1' />
@@ -31,6 +39,7 @@ render(){
 				</div>
 			</div>
 		)
+	}
 }
 
 export default SearchBar
