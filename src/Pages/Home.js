@@ -49,7 +49,7 @@ class Home extends React.Component{
 				</div>
 				<div>
 					<span>密碼</span>
-					<input type = "text" onChange={ (e) => this.updatePassword(e.target.value) }/>
+					<input type = "password" onChange={ (e) => this.updatePassword(e.target.value) }/>
 				</div>
 				<button onClick={ this.sendMes }>登入</button>
 			</div>
