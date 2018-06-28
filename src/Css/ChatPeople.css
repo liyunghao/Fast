@@ -1,0 +1,25 @@
+.chatImage{
+	width: 165.22px;
+	height: 165.22px;
+	border-radius: 50%;
+}
+
+.likeGift{
+	display: flex;
+}
+
+.gatherNow{
+	display: flex;
+}
+
+.gatherItem{
+	display: inline-block;
+}
+
+.gatherRecord{
+	display: flex;
+}
+
+.recordItem{
+	display: inline-block;
+}
