@@ -11,16 +11,16 @@ class Ride extends React.Component{
     this.updateRide = this.updateRide.bind(this)
   }
   updateRide(e){
-    let tmp = this.state.data
-    tmp.push(e)
-    this.setState( {  data: tmp })
-    console.log(this.state.data)
+    this.setState( (prevState) => {
+      console.log(prevState.data)
+      return { data: [...prevState.data, e] }
+   })
   }
   render(){
-    console.log(this)
+    console.log(this.state.data)
     return(
       <div>
-        <CardBox />
+        <CardBox Data = {this.state.data}/>
         <RideInput confirm = {this.updateRide}/>
         <SearchBar />
       </div>
