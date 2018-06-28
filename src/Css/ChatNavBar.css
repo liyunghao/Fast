@@ -1,0 +1,16 @@
+.PeopleImage{
+	width: 105px;
+	height: 105px;
+	border-radius: 50%;
+}
+
+.btndetail{
+	width: 216px;
+	height: 169px;
+}
+
+.Peoplebutton{
+	display: inline-block;
+	margin-top: 38px;
+	padding: 0px;
+}
