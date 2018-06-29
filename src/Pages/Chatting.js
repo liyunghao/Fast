@@ -5,7 +5,7 @@ import ChatPeople from '../Components/ChatPeople'
 import ChatContent from '../Components/ChatContent'
 import SendBox from '../Components/SendBox'
 
-const image_url = "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/27867151_1734407369913963_7206349640850496058_n.jpg?_nc_cat=0&oh=81a19e4055890e9762ea1b09147aad78&oe=5BB4E410";
+const image_url = "https://files.slack.com/files-pri/T2SCK7XCK-FBFEKK7K2/screen_shot_2017-03-26_at_6.02.30_pm.png";
 
 const fake_people = [
 	{
