@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div className = 'App'>
         <BrowserRouter>
-          <div>
+          <div className = 'Route'>
             <Route path = '/Ride' component = {NavBar}/>
             <Route path = '/Chatting' component = {NavBar}/>
             <Route path = '/Setting' component = {NavBar}/>
