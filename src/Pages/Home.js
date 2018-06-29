@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import withRouter from 'react-router-dom'
-
+import '../Css/Home.css'
 class Home extends React.Component{
 	constructor(props){
 		super(props);
@@ -44,7 +44,7 @@ class Home extends React.Component{
 		console.log(this.state)
 		return (
 			<div>
-				<form>
+				<form class = 'box'>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Account</label>
 						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
