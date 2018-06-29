@@ -41,6 +41,7 @@ class Home extends React.Component{
 	}
 
 	render(){
+		console.log(this.state)
 		return (
 			<div>
 				<form>
@@ -56,7 +57,7 @@ class Home extends React.Component{
 						  onChange={ (e) => this.updatePassword(e.target.value) } />
 					</div>
 					
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="submit" class="btn btn-primary" onClick={ this.sendMes } >Submit</button>
 				</form>
 				{/* <div>
 					<span>帳號</span>
@@ -69,6 +70,7 @@ class Home extends React.Component{
 				<button onClick={ this.sendMes }>登入</button> */}
 			</div>
 		)
+		console.log(this.state)
 	}
 }
 
