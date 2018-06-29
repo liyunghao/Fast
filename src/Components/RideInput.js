@@ -1,5 +1,4 @@
 import React from 'react'
-
 class RideInput extends React.Component{
   constructor(props){
     super(props)
@@ -71,10 +70,11 @@ class RideInput extends React.Component{
     //console.log(this.state)
     return(
       <div>
-				<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-					揪團
-				</button>
-
+        <div className='bt'>
+          <button type="button" className="btn btn-primary RideButton" data-toggle="modal" data-target="#exampleModalCenter">
+            揪團
+          </button>
+        </div>
 				<div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 					<div className="modal-dialog modal-dialog-centered" role="document">
 						<div className="modal-content">
