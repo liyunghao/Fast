@@ -43,7 +43,22 @@ class Home extends React.Component{
 	render(){
 		return (
 			<div>
-				<div>
+				<form>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Account</label>
+						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+							placeholder="Enter your account" onChange={ (e) => this.updateUsername(e.target.value)} />
+						<small id="emailHelp" class="form-text text-muted">We'll never share your personal infomation with anyone else.</small>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+						  onChange={ (e) => this.updatePassword(e.target.value) } />
+					</div>
+					
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+				{/* <div>
 					<span>帳號</span>
 					<input type = "text" onChange={ (e) => this.updateUsername(e.target.value) }/>
 				</div>
@@ -51,7 +66,7 @@ class Home extends React.Component{
 					<span>密碼</span>
 					<input type = "password" onChange={ (e) => this.updatePassword(e.target.value) }/>
 				</div>
-				<button onClick={ this.sendMes }>登入</button>
+				<button onClick={ this.sendMes }>登入</button> */}
 			</div>
 		)
 	}

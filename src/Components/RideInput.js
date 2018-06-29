@@ -131,7 +131,7 @@ class RideInput extends React.Component{
                   <div className="input-group-prepend">
                     <span className="input-group-text">備註</span>
                   </div>
-                  <textarea className="form-control" aria-label="With textarea" onChange={ (e) => this.updateDescription(e.target.value)} ></textarea>
+                  <textarea className="form-control" aria-label="With textarea" value = { this.state._data.description } onChange={ (e) => this.updateDescription(e.target.value)} ></textarea>
                 </div>
 							</div>
 							<div className="modal-footer">
