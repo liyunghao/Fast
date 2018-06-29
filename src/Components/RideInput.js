@@ -5,13 +5,13 @@ class RideInput extends React.Component{
     this.state = {
       _data: {
         title: '',
-        location: '',
-        dest: '',
-        startTime: '',
-        endTime: '',
+        from: '',
+        to: '',
+        time_start: '',
+        time_end: '',
         description:'',
         vehicle:'',
-        maxPass:''
+        num_passenger_max:''
       }
     }
     this.updateTitle = this.updateTitle.bind(this)
@@ -33,40 +33,40 @@ class RideInput extends React.Component{
   }
   updateLocation(e){
     let tmp = this.state._data
-    tmp['location'] = e
+    tmp.from = e
     this.setState({ _data: tmp})
   }
   updateDest(e){
     let tmp = this.state._data
-    tmp['dest'] = e
+    tmp.to = e
     this.setState({ _data: tmp})
   }
   updateStartTime(e){
     let tmp = this.state._data
     let t = new Date(e)
-    tmp['startTime'] = t.getTime()
+    tmp.time_start = t.getTime()
     this.setState({ _data: tmp})
   }
   updateEndTime(e){
     let tmp = this.state._data
     let t = new Date(e)
     console.log(t)
-    tmp['endTime'] = t.getTime()
+    tmp.time_end= t.getTime()
     this.setState({ _data: tmp})
   }
   updateDescription(e){
     let tmp = this.state._data
-    tmp['description'] = e
+    tmp.description = e
     this.setState({ _data: tmp})
   }
   updateVehicle(e){
     let tmp = this.state._data
-    tmp['vehicle'] = e
+    tmp.vehicle= e
     this.setState({ _data: tmp})
   }
   updateMaxPass(e){
     let tmp = this.state._data
-    tmp['maxPass'] = e
+    tmp.num_passenger_max = e
     this.setState({ _data: tmp})
   }
   render(){
@@ -90,7 +90,7 @@ class RideInput extends React.Component{
 							<div className="modal-body">
                 <div className="input-group input-group-sm mb-3">
                   <div className="input-group-prepend">
-                    <span className="input-group-text" id="inputGroup-sizing-sm">姓名</span>
+                    <span className="input-group-text" id="inputGroup-sizing-sm">標題</span>
                   </div>
                   <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  value = {this.state._data.title} onChange={ (e) => this.updateTitle(e.target.value)} />
                 </div>
@@ -98,13 +98,13 @@ class RideInput extends React.Component{
                   <div className="input-group-prepend">
                     <span className="input-group-text" id="inputGroup-sizing-sm">起始地</span>
                   </div>
-                  <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.location} onChange={ (e) => this.updateLocation(e.target.value)} />
+                  <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.from} onChange={ (e) => this.updateLocation(e.target.value)} />
                 </div>
                 <div className="input-group input-group-sm mb-3">
                   <div className="input-group-prepend">
                     <span className="input-group-text" id="inputGroup-sizing-sm">目的地</span>
                   </div>
-                  <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.dest} onChange={ (e) => this.updateDest(e.target.value)} />
+                  <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.to} onChange={ (e) => this.updateDest(e.target.value)} />
                 </div>
                 <div className="input-group input-group-sm mb-3">
                   <div className="input-group-prepend">
@@ -128,7 +128,7 @@ class RideInput extends React.Component{
                   <div className="input-group-prepend">
                     <span className="input-group-text" id="inputGroup-sizing-sm">限乘人數</span>
                   </div>
-                  <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.maxPass} onChange={ (e) => this.updateMaxPass(e.target.value)} />
+                  <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.num_passenger_max} onChange={ (e) => this.updateMaxPass(e.target.value)} />
                 </div>
                 <div className="input-group">
                   <div className="input-group-prepend">
@@ -141,13 +141,13 @@ class RideInput extends React.Component{
 								<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
 								<button type="button" className="btn btn-primary" data-dismiss="modal" onClick = { () => { this.props.confirm(this.state._data); this.setState({_data: {
                                                                                                                 title: '',
-                                                                                                                location: '',
-                                                                                                                dest: '',
-                                                                                                                startTime: '',
-                                                                                                                endTime: '',
+                                                                                                                from: '',
+                                                                                                                to: '',
+                                                                                                                time_start: '',
+                                                                                                                time_end: '',
                                                                                                                 description:'',
                                                                                                                 vehicle:'',
-                                                                                                                maxPass:''
+                                                                                                                num_passenger_max:''
                                                                                                               }});}}>Save changes</button>
 							</div>
 						</div>

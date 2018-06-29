@@ -20,22 +20,22 @@ class CardItem extends React.Component{
       <div className = 'col-4'>
         <div className="card fast-card">
           <div className="row">
-            <h4 className= "col-12 card-title text-center">{this.props.name}</h4>
+            <h4 className= "col-12 card-title text-center">{this.props.data.title}</h4>
           </div>
           <div className="row">
-            <p className= "col-12 text-center">{this.props.veh}</p>
+            <p className= "col-12 text-center">{this.props.data.vehicle}</p>
           </div>
           <div className="row">
-            <p className="col-5 text-center">{this.props.pstart}</p>
+            <p className="col-5 text-center">{this.props.data.from}</p>
             <p className="col-2 text-center">~</p>
-            <p className="col-5 text-center">{this.props.pend}</p>
+            <p className="col-5 text-center">{this.props.data.to}</p>
           </div>
           <div className="row">
-            <p className="col-6 card-text text-center">{ this.props.start }</p>
-            <p className="col-6 card-text text-center">{ this.props.dest }</p>
+            <p className="col-6 card-text text-center">{ this.props.data.time_start }</p>
+            <p className="col-6 card-text text-center">{ this.props.data.time_end }</p>
           </div>
           <div className="row">
-            <p className="col-12 text-center">{ this.props.excerpt }</p>
+            <p className="col-12 text-center">{ this.props.data.description }</p>
           </div>
             <div >
             <a href="#" className=" btn btn-primary fast-btn fast-btn-left" onClick={() => this.joinRide.bind(this)(this.props.id, 1)}>駕駛++</a>

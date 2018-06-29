@@ -25,16 +25,10 @@ class CardBox extends React.Component {
 					this.props.data.length >0?
 						this.props.data.map( (_data,index) =>
 							<CardItem id = {_data.id}
-						token={this.props.token}
-						updateRides={this.props.updateRides.bind(this)}
-						veh = {_data.vehicle}
-						pstart = {_data.location}
-                        pend = {_data.dest}
-                        start ={ this.transTime(Number(_data.time_start))}
-                        dest = { this.transTime(Number(_data.time_end))}
-                        name = {_data.title}
-                        excerpt = { _data.description}
-                        key={index}/>
+							token={this.props.token}
+							updateRides={this.props.updateRides.bind(this)}
+							data = {_data} 
+						/>
 						)
 						: <div></div>
 				}
