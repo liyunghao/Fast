@@ -14,6 +14,19 @@ class CardItem extends React.Component{
       this.props.updateRides()
     })
   }
+  transTime(unixTime) {
+     let date = new Date(unixTime)
+     // Hours part from the timestamp
+     var hours = date.getHours();
+     // Minutes part from the timestamp
+     var minutes = "0" + date.getMinutes();
+     // Seconds part from the timestamp
+     var seconds = "0" + date.getSeconds();
+
+     // Will display time in 10:30:23 format
+     var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+     return formattedTime
+   }
   render(){
     console.log(this.props)
     return(
@@ -31,8 +44,8 @@ class CardItem extends React.Component{
             <p className="col-5 text-center">{this.props.data.to}</p>
           </div>
           <div className="row">
-            <p className="col-6 card-text text-center">{ this.props.data.time_start }</p>
-            <p className="col-6 card-text text-center">{ this.props.data.time_end }</p>
+            <p className="col-6 card-text text-center">{ this.transTime(Number(this.props.data.time_start)) }</p>
+            <p className="col-6 card-text text-center">{ this.transTime(Number(this.props.data.time_end)) }</p>
           </div>
           <div className="row">
             <p className="col-12 text-center">{ this.props.data.description }</p>
