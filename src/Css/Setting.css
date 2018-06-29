@@ -1,0 +1,149 @@
+.nav{
+			justify-content: space-between;
+		    flex-wrap: wrap;
+		    display: flex;
+		    
+		}
+		
+		.link{
+			color: #F6E2BD;
+			font-size: 36px;
+		}
+		.bt1{
+				height: 270px;
+				width: 165px;
+				background-color:#333E4A ;
+				
+				border: 1px solid #F6E2BD;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+				box-sizing: border-box;
+				flex: 1;
+			}
+		.bt2{
+				height: 270px;
+				width: 165px;
+				background-color:#333E4A ;
+				
+				border: 1px solid #F6E2BD;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+				box-sizing: border-box;
+				
+				padding: 0 8px;
+				
+				flex: 1;
+			}
+		.bt3{
+				height: 270px;
+				width: 165px;
+				background-color:#333E4A ;
+				
+				box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+				box-sizing: border-box;
+				
+				padding: 0 8px;
+				
+				flex: 1;
+			}
+
+		*{
+			position: relative;
+		}
+		.box{
+			position: absolute;
+			left: 335px;
+			top: 102px;
+		}
+		.img{
+			width: 290px;
+			height: 290px;
+			border-radius: 73px;
+		}
+		
+		.nameul{
+			position: absolute;
+			left: 305px;
+			top: 52px;
+			list-style-type: none;
+			
+		}
+		.nameli{
+			display: block;
+			float: left;
+			padding-right: 10px;
+			width: 250px;
+			font-size: 36px;
+		}
+		.student-id-li{
+			display: block;
+			float: left;
+			padding-right: 10px;
+			width: 250px;
+			font-size: 36px;
+		}
+		.fa-question-circle{
+			font-size: 46px;
+			color: #51A4B4;
+			position: absolute;
+			left: 738px;
+			top: 113px;
+		}
+
+		.recordbox{
+				position: absolute;
+				left: 839px;
+				top: 379px;
+			}
+			
+			.myrecordul{
+				list-style-type: none;
+			
+			}
+			.myrecordli1{
+			display: block;
+			float: left;
+			padding-right: 10px;
+			width: 700px;
+			font-size: 36px;
+			}
+			.myrecordli2{
+			display: block;
+			float: left;
+			padding-right: 10px;
+			width: 700px;
+			font-size: 36px;
+			}
+			.myrecordli3{
+			display: block;
+			float: left;
+			padding-right: 10px;
+			width: 1000px;
+			font-size: 36px;
+			}
+			
+			.floattoright{
+				position: absolute;
+				left: 200px;
+				top: 130px;
+			}
+			.myrecordli4{
+			display: block;
+			float: left;
+			/*padding-right: 300px;*/
+			width: 700px;
+			font-size: 36px;
+			
+			}
+			.myrecordli5{
+			display: block;
+			float: left;
+			/*padding-right: 10px;*/
+			width: 700px;
+			font-size: 36px;
+			}
+			.myrecordli6{
+			display: block;
+			float: left;
+			/*padding-right: 10px;*/
+			width: 700px;
+			font-size: 36px;
+			}
