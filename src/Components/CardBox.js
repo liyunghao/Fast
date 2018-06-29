@@ -25,8 +25,8 @@ class CardBox extends React.Component {
 					this.props.data.length >0?
 						this.props.data.map( (_data,index) =>
 							<CardItem veh = {_data.vehicle}
-									      pstart = {_data.from}
-                        pend = {_data.to}
+									      pstart = {_data.location}
+                        pend = {_data.dest}
                         start ={ this.transTime(Number(_data.time_start))}
                         dest = { this.transTime(Number(_data.time_end))}
                         name = {_data.title}
