@@ -36,18 +36,20 @@ class App extends Component {
     return (
       <div className = 'App'>
         <BrowserRouter>
-          <div>
+          <div className = 'Route'>
             <Route path = '/Ride' component = {NavBar}/>
             <Route path = '/Chatting' component = {NavBar}/>
             <Route path = '/Setting' component = {NavBar}/>
 
-            <Switch>
-              <Route exact path = '/' render = { this.state.token ? () => <Redirect to='/Ride' /> : ()=>{return <Home updateToken = {this.updateToken}/> }}/>
-              <Route path = '/Ride' component = { Ride }/>
-              <Route path = '/Chatting' component = { Chatting }/>
-              <Route path = '/Setting' component = { Setting }/>
-              <Route component = { Notfound }/>
-            </Switch>
+            <div className='container'>
+              <Switch>
+                  <Route exact path = '/' render = { this.state.token ? () => <Redirect to='/Ride' /> : ()=>{return <Home updateToken = {this.updateToken}/> }}/>
+                  <Route path = '/Ride' component = { () => <Ride token={this.state.token} /> }/>
+                  <Route path = '/Chatting' component = { Chatting }/>
+                  <Route path = '/Setting' component = { Setting }/>
+                  <Route component = { Notfound }/>
+              </Switch>
+            </div>
           </div>
         </BrowserRouter>
 

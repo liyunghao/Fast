@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import withRouter from 'react-router-dom'
-
+import '../Css/Home.css'
 class Home extends React.Component{
 	constructor(props){
 		super(props);
@@ -41,19 +41,36 @@ class Home extends React.Component{
 	}
 
 	render(){
+		console.log(this.state)
 		return (
 			<div>
-				<div>
+				<div className = 'box' action="#">
+					<div className = "form-group">
+						<label htmlFor="exampleInputEmail1">Account</label>
+						<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+							placeholder="Enter your account" onChange={ (e) => this.updateUsername(e.target.value)} />
+						<small id="emailHelp" className="form-text text-muted">{"We\'ll never share your personal infomation with anyone else."}</small>
+					</div>
+					<div className="form-group">
+						<label htmlFor="exampleInputPassword1">Password</label>
+						<input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"
+						  onChange={ (e) => this.updatePassword(e.target.value) } />
+					</div>
+
+					<button className="btn btn-primary" onClick={ this.sendMes } >Submit</button>
+				</div>
+				{/* <div>
 					<span>帳號</span>
 					<input type = "text" onChange={ (e) => this.updateUsername(e.target.value) }/>
 				</div>
 				<div>
 					<span>密碼</span>
-					<input type = "text" onChange={ (e) => this.updatePassword(e.target.value) }/>
+					<input type = "password" onChange={ (e) => this.updatePassword(e.target.value) }/>
 				</div>
-				<button onClick={ this.sendMes }>登入</button>
+				<button onClick={ this.sendMes }>登入</button> */}
 			</div>
 		)
+		console.log(this.state)
 	}
 }
 

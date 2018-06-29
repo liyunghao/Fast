@@ -1,5 +1,6 @@
 import React from 'react'
 
+<<<<<<< HEAD
 class Setting extends React.Component {
 
 
@@ -72,4 +73,19 @@ render(){
 	}
 }
 
+=======
+class Setting extends React.Component{
+  constructor(props){
+    super(props)
+    this.state ={
+      name:'',
+      id:'',
+      point:'',
+      rating:'',
+      record:'',
+      now:''
+    }
+  }
+}
+>>>>>>> 12d92f976cc751ae0f22bafd66d2d2142dfe3153
 export default Setting
