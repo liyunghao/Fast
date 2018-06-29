@@ -44,17 +44,10 @@ class Home extends React.Component{
 		console.log(this.state)
 		return (
 			<div>
-<<<<<<< HEAD
-				<form class = 'box'>
-					<div class="form-group">
-						<label for="exampleInputEmail1">Account</label>
-						<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-=======
-				<form action="#">
-					<div className="form-group">
+				<form className = 'box' action="#">
+					<div className = "form-group">
 						<label htmlFor="exampleInputEmail1">Account</label>
 						<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
->>>>>>> afb5fa9636c3cee5d4075b5f32a4a3717340076c
 							placeholder="Enter your account" onChange={ (e) => this.updateUsername(e.target.value)} />
 						<small id="emailHelp" className="form-text text-muted">{"We\'ll never share your personal infomation with anyone else."}</small>
 					</div>
