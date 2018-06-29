@@ -2,9 +2,6 @@ import React from 'react'
 import '../Css/Setting.css'
 class Setting extends React.Component {
 
-
-
-
 	constructor(props) {
     super(props);
    
@@ -20,13 +17,21 @@ class Setting extends React.Component {
 		this.setState({ rando: t })
 	}
 	updateText(t){
-			this.setState({text: t})
+		this.setState({text: t})
 
 	}
 			
 render(){
 		return(
-		  <div>
+      <div>		
+        <div className='sbox'>
+          <img className='img' src="https://nerdist.com/wp-content/uploads/2016/11/pokemon-cookbook-feature-11282016.jpg"/>
+          <ul className="nameul">
+            <li>姓名 無古蹟</li>
+            <li>學號 0512345</li>
+          </ul>
+        <i class="far fa-question-circle"></i>
+			  </div>
         <span className = 'text'>我喜歡收到什麼禮物</span>
           <div className='container'>
             <div className='row'>
@@ -57,7 +62,7 @@ render(){
         </div>
     </div>
 		)
-	}
+  }
 }
 
 export default Setting

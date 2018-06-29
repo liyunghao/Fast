@@ -13,3 +13,12 @@
   margin-bottom: 15px;
   padding-left: 15px;
 }
+.img{
+  width: 290px;
+  height: 290px;
+  border-radius: 73px;
+}
+.sbox{
+  padding-top:10px;
+  margin-top: 0px;
+}

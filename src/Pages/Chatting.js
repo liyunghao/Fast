@@ -31,23 +31,37 @@ class Chatting extends React.Component{
 
 		this.state = {
 		chat : {
-		"username" : "",
-    "user_id" : 0,
-    "liked_gift": "",
-    "current_party": [""],
-    "past_party": [""],
+			"username" : "",
+    		"user_id" : 0,
+    		"liked_gift": "",
+    		"current_party": [""],
+    		"past_party": [""],
 		},
 			InputMes :　"",
-			MesRecord : "",
+			MesRecord : [""],
 			socket: io()
 		}
 		this.ChangeChat = this.ChangeChat.bind(this)
+		this.updateMes = this.updateMes.bind(this)
+		this.updateRecord = this.updateRecord.bind(this)
 	}
 
 	ChangeChat(t){
 		this.setState({
 			chat: fake_people.filter(value => (value.user_id === t))[0]
 		})
+	}
+
+	updateMes(t){
+		this.setState({InputMes : t})
+	}
+
+	updateRecord(t){
+	    t.preventDefault();
+		const final = this.state.MesRecord.concat(this.state.InputMes)
+		this.setState({MesRecord: final})
+		this.setState({InputMes: ""})
+		console.log(this.state.MesRecord)
 	}
 
 	render() {
@@ -64,8 +78,8 @@ class Chatting extends React.Component{
 				</div>
 				<div className="row">
 				<div className="col-8">
-					<ChatContent />
-					<SendBox />
+					<ChatContent showMes = {this.state.MesRecord}/>
+					<SendBox mes = {this.state.InputMes} changeMes = {this.updateMes} handleClick = {this.updateRecord}/>
 				</div>
 					<ChatPeople item = {this.state.chat} img = {image_url}/>
 				</div>
