@@ -12,9 +12,23 @@ class Ride extends React.Component{
     this.updateRide = this.updateRide.bind(this)
   }
   updateRide(e){
-    this.setState( (prevState) => {
-      console.log(prevState.data)
-      return { data: [...prevState.data, e] }
+    var params = {
+      token: this.props.token,
+      title: e.title,
+      time_start: e.startTime,
+      time_end: e.endTime,
+      from: e.location,
+      to: e.dest,
+      description: e.description,
+      vehicle: e.vehicle,
+      num_passenger_max: e.maxPass
+    }
+    axios.post('/api/ride', params).then(function(response) {
+      console.log(response.data)
+      return axios.get('/api/ride')
+    }).then((response) => {
+      console.log(response)
+      this.setState({data:response.data.data})
     })
   }
 

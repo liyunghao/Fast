@@ -1,4 +1,5 @@
 import React from 'react';
+import io from 'socket.io-client'
 import ChatNavBar from '../Components/ChatNavBar'
 import ChatPeople from '../Components/ChatPeople'
 import ChatContent from '../Components/ChatContent'
@@ -37,9 +38,9 @@ class Chatting extends React.Component{
     "past_party": [""],
 		},
 			InputMes :　"",
-			MesRecord : ""
+			MesRecord : "",
+			socket: io()
 		}
-
 		this.ChangeChat = this.ChangeChat.bind(this)
 	}
 
@@ -52,16 +53,22 @@ class Chatting extends React.Component{
 	render() {
 		return(
 			<div>
+				<div className="row">
 				{
-						fake_people.length > 0?
-							fake_people.map( data =>
-								(<ChatNavBar key = {data.user_id} name = {data.username} image = {image_url} id = {data.user_id} onbtnClick = {this.ChangeChat}/>)
-							)
-							:<div></div>
+					fake_people.length > 0?
+						fake_people.map( data =>
+							(<ChatNavBar key = {data.user_id} name = {data.username} image = {image_url} id = {data.user_id} onbtnClick = {this.ChangeChat}/>)
+						)
+					:<div></div>
 				}
-				<ChatPeople item = {this.state.chat} img = {image_url}/>
-				<ChatContent />
-				<SendBox />
+				</div>
+				<div className="row">
+				<div className="col-8">
+					<ChatContent />
+					<SendBox />
+				</div>
+					<ChatPeople item = {this.state.chat} img = {image_url}/>
+				</div>
 			</div>
 		)
 	}

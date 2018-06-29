@@ -1,0 +1,29 @@
+.fast-card {
+    background-color: #c1e3f0;
+    border-radius: 5px;
+    margin-bottom: 1.2em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.7em 0.1em #ccc;
+}
+.card-title {
+    text-decoration: underline;
+}
+.fast-btn {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    height: 3em;
+    background-color: #a8d3bf;
+    border: none;
+    color: #2f353c;
+    line-height: 2em;
+    width: 50%;
+    margin: 0px;
+}
+.fast-btn-left{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+}
+.fast-btn-right {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+}

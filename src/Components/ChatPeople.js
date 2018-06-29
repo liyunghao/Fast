@@ -6,7 +6,7 @@ class ChatPeople extends React.Component {
 	render (){
 		console.log(this.props.item.current_party)
 		return(
-				<div className = "wholeChat">
+				<div className = "wholeChat col-4">
 					<img src = {this.props.img} className = "chatImage" />
 					<div className = "chatName">{this.props.item.username}</div>
 					<div>
