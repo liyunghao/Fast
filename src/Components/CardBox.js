@@ -27,7 +27,8 @@ class CardBox extends React.Component {
 							<CardItem id = {_data.id}
 							token={this.props.token}
 							updateRides={this.props.updateRides.bind(this)}
-							data = {_data} 
+							data = {_data}
+							key = {index}
 						/>
 						)
 						: <div></div>

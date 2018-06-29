@@ -44,7 +44,7 @@ class Home extends React.Component{
 		console.log(this.state)
 		return (
 			<div>
-				<form className = 'box' action="#">
+				<div className = 'box' action="#">
 					<div className = "form-group">
 						<label htmlFor="exampleInputEmail1">Account</label>
 						<input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -58,7 +58,7 @@ class Home extends React.Component{
 					</div>
 
 					<button className="btn btn-primary" onClick={ this.sendMes } >Submit</button>
-				</form>
+				</div>
 				{/* <div>
 					<span>帳號</span>
 					<input type = "text" onChange={ (e) => this.updateUsername(e.target.value) }/>

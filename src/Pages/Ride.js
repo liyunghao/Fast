@@ -31,21 +31,19 @@ class Ride extends React.Component{
       this.setState({data:response.data.data})
     })
   }
-  fetchRides () {
+
+  componentDidMount () {
     axios.get('/api/ride')
     .then((response) => {
       console.log(response)
       this.setState({data:response.data.data})
     })
   }
-  componentDidMount () {
-    this.fetchRides()
-  }
   render(){
     // console.log(this)
     return(
       <div>
-        <CardBox data = {this.state.data} updateRides={this.fetchRides.bind(this)} token={this.props.token}/>
+        <CardBox data = {this.state.data}/>
         <RideInput confirm = {this.updateRide}/>
         <SearchBar />
       </div>
