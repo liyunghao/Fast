@@ -1,7 +1,19 @@
 import React from 'react'
+import axios from 'axios'
 import './fast_card.css'
 
 class CardItem extends React.Component{
+  joinRide(rideId, isDriver) {
+    let url = '/api/ride/' + rideId.toString()
+    let params = {
+      is_driver: isDriver,
+      token: this.props.token
+    }
+    axios.put(url, params).then((response) => {
+      console.log(response)
+      this.props.updateRides()
+    })
+  }
   render(){
     console.log(this.props)
     return(
@@ -26,8 +38,8 @@ class CardItem extends React.Component{
             <p className="col-12 text-center">{ this.props.excerpt }</p>
           </div>
             <div >
-            <a href="#" className=" btn btn-primary fast-btn fast-btn-left">駕駛++</a>
-            <a href="#" className="btn btn-primary fast-btn fast-btn-right">乘客++</a>
+            <a href="#" className=" btn btn-primary fast-btn fast-btn-left" onClick={() => this.joinRide.bind(this)(this.props.id, 1)}>駕駛++</a>
+            <a href="#" className="btn btn-primary fast-btn fast-btn-right" onClick={() => this.joinRide.bind(this)(this.props.id, 0)}>乘客++</a>
           </div>
         </div>
       </div>
