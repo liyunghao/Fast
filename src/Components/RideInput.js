@@ -1,5 +1,4 @@
 import React from 'react'
-
 class RideInput extends React.Component{
   constructor(props){
     super(props)
@@ -71,10 +70,11 @@ class RideInput extends React.Component{
     //console.log(this.state)
     return(
       <div>
-				<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-					揪團
-				</button>
-
+        <div className='bt'>
+          <button type="button" className="btn btn-primary RideButton" data-toggle="modal" data-target="#exampleModalCenter">
+            揪團
+          </button>
+        </div>
 				<div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 					<div className="modal-dialog modal-dialog-centered" role="document">
 						<div className="modal-content">
@@ -107,13 +107,13 @@ class RideInput extends React.Component{
                   <div className="input-group-prepend">
                     <span className="input-group-text" id="inputGroup-sizing-sm">開始時間</span>
                   </div>
-                  <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.startTime} onChange={ (e) => this.updateStartTime(e.target.value)} />
+                  <input type="datetime-local" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.startTime} onChange={ (e) => this.updateStartTime(e.target.value)} />
                 </div>
                 <div className="input-group input-group-sm mb-3">
                   <div className="input-group-prepend">
                     <span className="input-group-text" id="inputGroup-sizing-sm">結束時間</span>
                   </div>
-                  <input type="text" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.endTime} onChange={ (e) => this.updateEndTime(e.target.value)} />
+                  <input type="datetime-local" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value = {this.state._data.endTime} onChange={ (e) => this.updateEndTime(e.target.value)} />
                 </div>
                 <div className="input-group input-group-sm mb-3">
                   <div className="input-group-prepend">
