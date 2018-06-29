@@ -4,7 +4,7 @@ class ChatContent extends React.Component {
 	render (){
 		return(
 				<div>
-					this is ChatContent
+					{this.props.showMes.map((data, index) => (<div key = {index}>{data}<br/></div>))}
 				</div>
 		)
 	}
